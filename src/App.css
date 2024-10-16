@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.App {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.topCircle{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: rgba(233,89,76,0.5);
+  scale: 1;
+  position: absolute;
+  top: 2rem;
+  left: 10%;
+  box-shadow: 0 0 50px  rgb(216, 72, 105);
+  animation: topCircleAnimation 15s infinite;  
+}
+
+.bottomCircle{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background-color: rgba(134,65,244,0.2);
+  position: absolute;
+  right: 3%;
+  box-shadow: 0 0 50px  rgba(86,72,216,0.6);
+  animation: bottomCircleAnimation 15s infinite;  
+}
+
+@keyframes topCircleAnimation {
+  50%{
+    left: 13%;
+    scale: 1.2; 
+    top: 3rem;
+  }
+}
+
+@keyframes bottomCircleAnimation {
+  50%{
+    right: 8%;
+    scale: 1.2; 
+  }
+}
+
+@media(max-width: 650px){
+  .topCircle{
+    top:20%
+  }
+
+  @keyframes topCircleAnimation {
+  50%{
+    left: 13%;
+    scale: 1.11; 
+    top: 25%; 
+  }
+}
+
+  .bottomCircle{
+    display: none;
+  }
+}
